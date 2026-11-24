@@ -1,0 +1,15 @@
+{
+  "documentId": "D-11",
+  "facts": [
+    {
+      "id": "R-13",
+      "field": "unsourced_manual_factor",
+      "value": 0.0021,
+      "unit": "tCO2e/kg",
+      "period": "2026-Q3",
+      "page": 1,
+      "quote": "Manual factor entered: 0.0021 tCO2e/kg (no source citation)",
+      "status": "rejected"
+    }
+  ]
+}

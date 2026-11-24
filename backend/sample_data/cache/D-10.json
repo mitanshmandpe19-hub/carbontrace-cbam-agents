@@ -1,0 +1,15 @@
+{
+  "documentId": "D-10",
+  "facts": [
+    {
+      "id": "R-12",
+      "field": "eu_exported_tonnes",
+      "value": 46,
+      "unit": "t",
+      "period": "2026-Q3",
+      "page": 1,
+      "quote": "Total EU CBAM Shipped Tonnes | 7318 15 | Q3 2026 Total | 46",
+      "status": "verified"
+    }
+  ]
+}

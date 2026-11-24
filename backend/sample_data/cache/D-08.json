@@ -1,0 +1,25 @@
+{
+  "documentId": "D-08",
+  "facts": [
+    {
+      "id": "R-08",
+      "field": "precursor_alloy_tonnes",
+      "value": 6,
+      "unit": "t",
+      "period": "2026-Q3",
+      "page": 1,
+      "quote": "Net Weight Supplied 6.0 tonnes",
+      "status": "verified"
+    },
+    {
+      "id": "R-09",
+      "field": "precursor_alloy_factor",
+      "value": 1.25,
+      "unit": "tCO2e/t",
+      "period": "2026-Q3",
+      "page": 1,
+      "quote": "Declared Precursor Emissions 1.25 tCO2e/t (Sample verified certificate)",
+      "status": "verified"
+    }
+  ]
+}

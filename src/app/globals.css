@@ -1,0 +1,423 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  color-scheme: light;
+
+  /* Surface & Text Palette (Light) */
+  --ct-bg: #fcfafd;
+  --ct-surface: #ffffff;
+  --ct-surface-raised: #f7f4fa;
+  --ct-surface-subtle: #fcfafd;
+  --ct-ink: #2a1740;
+  --ct-ink-secondary: #5b4b6e;
+  --ct-border: rgba(42, 23, 64, 0.11);
+  --ct-border-strong: rgba(42, 23, 64, 0.22);
+  --ct-divide: rgba(42, 23, 64, 0.08);
+  --ct-shadow-card: 0 10px 30px -14px rgba(42, 23, 64, 0.11);
+  --ct-header-bg: rgba(255, 255, 255, 0.92);
+  --ct-backdrop: rgba(42, 23, 64, 0.36);
+  --ct-skeleton: rgba(42, 23, 64, 0.08);
+
+  /* Tooltip */
+  --ct-tooltip-bg: #2a1740;
+  --ct-tooltip-ink: #ffffff;
+  --ct-tooltip-accent: #fff1dc;
+  --ct-tooltip-border: rgba(42, 23, 64, 0.18);
+
+  /* Focus ring */
+  --ct-focus: #6a1b9a;
+  --ct-focus-pink: #d81b60;
+
+  /* Demo Banner & Hero Gradient (Light) */
+  --ct-hero-bg: linear-gradient(135deg, #fce4ec 0%, #fff1dc 52%, #fffbe0 100%);
+  --ct-banner-bg: linear-gradient(90deg, #fce4ec 0%, #fff1dc 50%, #fffbe0 100%);
+  --ct-banner-border: rgba(239, 108, 0, 0.25);
+  --ct-banner-pill-bg: #2a1740;
+  --ct-banner-pill-ink: #ffffff;
+  --ct-banner-pill-icon: #fff1dc;
+
+  /* Chat Outgoing Bubble */
+  --ct-bubble-out-bg: #2a1740;
+  --ct-bubble-out-ink: #ffffff;
+
+  /* Primary Gradient Button */
+  --ct-btn-gradient: linear-gradient(135deg, #ff85b3 0%, #ffd180 52%, #fff176 100%);
+  --ct-btn-gradient-ink: #1a0d29;
+
+  /* Login Corner Glow */
+  --ct-login-glow: radial-gradient(
+    circle at top left,
+    rgba(216, 27, 96, 0.24) 0%,
+    rgba(255, 193, 7, 0.22) 48%,
+    rgba(255, 251, 224, 0) 76%
+  );
+
+  /* Agent Colours: Collector (Blue) */
+  --ct-collector: #1e63b5;
+  --ct-collector-text: #174e91;
+  --ct-collector-soft: #eef4fc;
+  --ct-collector-border: rgba(30, 99, 181, 0.28);
+  --ct-collector-btn: #1e63b5;
+  --ct-collector-btn-hover: #174e91;
+
+  /* Agent Colours: Outreach (Teal) */
+  --ct-outreach: #00897b;
+  --ct-outreach-text: #00695c;
+  --ct-outreach-soft: #e6f5f3;
+  --ct-outreach-border: rgba(0, 137, 123, 0.28);
+  --ct-outreach-btn: #00796b;
+  --ct-outreach-btn-hover: #00695c;
+
+  /* Agent Colours: Calculator (Orange) */
+  --ct-calculator: #ef6c00;
+  --ct-calculator-text: #a64600;
+  --ct-calculator-soft: #fff3e5;
+  --ct-calculator-border: rgba(239, 108, 0, 0.30);
+  --ct-calculator-btn: #c85300;
+  --ct-calculator-btn-hover: #a64600;
+
+  /* Agent Colours: Verifier (Magenta) */
+  --ct-verifier: #d81b60;
+  --ct-verifier-text: #ad1457;
+  --ct-verifier-soft: #fce8f0;
+  --ct-verifier-border: rgba(216, 27, 96, 0.32);
+  --ct-verifier-btn: #c91859;
+  --ct-verifier-btn-hover: #ad1457;
+
+  /* Agent Colours: Exporter / You (Purple) */
+  --ct-exporter: #6a1b9a;
+  --ct-exporter-text: #5a1485;
+  --ct-exporter-soft: #f4eaf9;
+  --ct-exporter-border: rgba(106, 27, 154, 0.24);
+  --ct-exporter-btn: #6a1b9a;
+  --ct-exporter-btn-hover: #571580;
+
+  /* Highlight / Quote Callout (Non-paper UI) */
+  --ct-quote-bg: #fff8eb;
+  --ct-quote-ink: #2a1740;
+
+  /* Centralized Typography Scale (nothing below 14px) */
+  --ct-fs-label: 0.875rem;       /* 14px */
+  --ct-fs-table: 0.9375rem;      /* 15px */
+  --ct-fs-body: 1rem;            /* 16px */
+  --ct-fs-button: 1rem;          /* 16px */
+  --ct-fs-card-title: 1.1875rem; /* 19px (18-20px) */
+  --ct-fs-section: 1.5rem;       /* 24px (22-26px) */
+  --ct-fs-page: clamp(2rem, 3vw, 2.5rem);        /* 32-40px */
+  --ct-fs-stat: clamp(2.5rem, 3.6vw, 3.375rem);  /* 40-54px */
+}
+
+.dark {
+  color-scheme: dark;
+
+  /* Surface & Text Palette (Black) */
+  --ct-bg: #0a0a0a;
+  --ct-surface: #141414;
+  --ct-surface-raised: #1c1c1c;
+  --ct-surface-subtle: #181818;
+  --ct-ink: #ffffff;
+  --ct-ink-secondary: #b5b5b5;
+  --ct-border: #2a2a2a;
+  --ct-border-strong: #404040;
+  --ct-divide: #262626;
+  --ct-shadow-card: 0 14px 36px -14px rgba(0, 0, 0, 0.85);
+  --ct-header-bg: rgba(10, 10, 10, 0.90);
+  --ct-backdrop: rgba(0, 0, 0, 0.76);
+  --ct-skeleton: #262626;
+
+  /* Tooltip */
+  --ct-tooltip-bg: #1c1c1c;
+  --ct-tooltip-ink: #ffffff;
+  --ct-tooltip-accent: #ffe082;
+  --ct-tooltip-border: #404040;
+
+  /* Focus ring */
+  --ct-focus: #ff66a1;
+  --ct-focus-pink: #ff66a1;
+
+  /* Demo Banner & Hero Gradient (Dark) */
+  --ct-hero-bg:
+    linear-gradient(
+      135deg,
+      rgba(216, 27, 96, 0.24) 0%,
+      rgba(239, 108, 0, 0.16) 52%,
+      rgba(255, 224, 130, 0.14) 100%
+    ),
+    #141414;
+  --ct-banner-bg:
+    linear-gradient(
+      90deg,
+      rgba(216, 27, 96, 0.28) 0%,
+      rgba(239, 108, 0, 0.18) 52%,
+      rgba(255, 224, 130, 0.18) 100%
+    ),
+    #121212;
+  --ct-banner-border: rgba(255, 213, 79, 0.30);
+  --ct-banner-pill-bg: #1c1c1c;
+  --ct-banner-pill-ink: #ffffff;
+  --ct-banner-pill-icon: #ffe082;
+
+  /* Chat Outgoing Bubble */
+  --ct-bubble-out-bg: #262133;
+  --ct-bubble-out-ink: #ffffff;
+
+  /* Login Corner Glow */
+  --ct-login-glow: radial-gradient(
+    circle at top left,
+    rgba(216, 27, 96, 0.38) 0%,
+    rgba(255, 193, 7, 0.24) 45%,
+    rgba(10, 10, 10, 0) 74%
+  );
+
+  /* Brightened Agent Colours for Dark Readability */
+  --ct-collector: #5ba4fc;
+  --ct-collector-text: #8ec5ff;
+  --ct-collector-soft: rgba(59, 130, 246, 0.18);
+  --ct-collector-border: rgba(91, 164, 252, 0.42);
+  --ct-collector-btn: #256fd1;
+  --ct-collector-btn-hover: #1e5eb8;
+
+  --ct-outreach: #2dd4bf;
+  --ct-outreach-text: #67f0dd;
+  --ct-outreach-soft: rgba(20, 184, 166, 0.18);
+  --ct-outreach-border: rgba(45, 212, 191, 0.42);
+  --ct-outreach-btn: #00796b;
+  --ct-outreach-btn-hover: #00695c;
+
+  --ct-calculator: #ff9838;
+  --ct-calculator-text: #ffc278;
+  --ct-calculator-soft: rgba(249, 115, 22, 0.18);
+  --ct-calculator-border: rgba(255, 152, 56, 0.44);
+  --ct-calculator-btn: #c85300;
+  --ct-calculator-btn-hover: #a64600;
+
+  --ct-verifier: #ff5294;
+  --ct-verifier-text: #ff94be;
+  --ct-verifier-soft: rgba(216, 27, 96, 0.22);
+  --ct-verifier-border: rgba(255, 82, 148, 0.46);
+  --ct-verifier-btn: #d81b60;
+  --ct-verifier-btn-hover: #b81450;
+
+  --ct-exporter: #c084fc;
+  --ct-exporter-text: #debaff;
+  --ct-exporter-soft: rgba(168, 85, 247, 0.20);
+  --ct-exporter-border: rgba(192, 132, 252, 0.44);
+  --ct-exporter-btn: #7b22b3;
+  --ct-exporter-btn-hover: #6a1b9a;
+
+  /* Highlight / Quote Callout (Non-paper UI) */
+  --ct-quote-bg: rgba(255, 152, 56, 0.14);
+  --ct-quote-ink: #ffffff;
+}
+
+@theme inline {
+  --color-background: var(--ct-bg);
+  --color-foreground: var(--ct-ink);
+  --font-sans: var(--font-jakarta), system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-jakarta), system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background: var(--ct-bg);
+  color: var(--ct-ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--ct-bg);
+  color: var(--ct-ink);
+  font-family: var(--font-jakarta), system-ui, -apple-system, sans-serif;
+  font-size: var(--ct-fs-body);
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+}
+
+/* Smooth 200ms theme transitions without affecting transform/opacity animations */
+@media (prefers-reduced-motion: no-preference) {
+  :where(
+      html,
+      body,
+      header,
+      aside,
+      nav,
+      main,
+      section,
+      article,
+      div,
+      table,
+      th,
+      td,
+      button,
+      a,
+      input,
+      select,
+      textarea,
+      details,
+      summary,
+      dialog,
+      blockquote
+    ) {
+    transition-property: background-color, color, border-color, box-shadow;
+    transition-duration: 200ms;
+    transition-timing-function: ease;
+  }
+}
+
+p {
+  max-width: 65ch;
+}
+
+.ct-page-title {
+  font-size: var(--ct-fs-page);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--ct-ink);
+}
+
+.ct-section-title {
+  font-size: var(--ct-fs-section);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  color: var(--ct-ink);
+}
+
+.ct-card-title {
+  font-size: var(--ct-fs-card-title);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: var(--ct-ink);
+}
+
+.ct-stat-number {
+  font-size: var(--ct-fs-stat);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  font-variant-numeric: tabular-nums;
+}
+
+.ct-stat-label {
+  font-size: var(--ct-fs-label);
+  line-height: 1.45;
+  font-weight: 500;
+  color: var(--ct-ink-secondary);
+}
+
+.ct-body {
+  font-size: var(--ct-fs-body);
+  line-height: 1.6;
+  max-width: 65ch;
+  color: var(--ct-ink-secondary);
+}
+
+.ct-label {
+  font-size: var(--ct-fs-label);
+  line-height: 1.45;
+  color: var(--ct-ink-secondary);
+}
+
+.ct-table-text {
+  font-size: var(--ct-fs-table);
+  line-height: 1.5;
+}
+
+.ct-hero-gradient {
+  background: var(--ct-hero-bg);
+}
+
+.ct-demo-banner {
+  background: var(--ct-banner-bg);
+  border-color: var(--ct-banner-border);
+}
+
+.ct-gradient-btn {
+  background: var(--ct-btn-gradient);
+  color: var(--ct-btn-gradient-ink);
+}
+
+.ct-gradient-btn:hover {
+  filter: brightness(0.97);
+}
+
+.ct-soft-card {
+  background: var(--ct-surface);
+  border: 1px solid var(--ct-border);
+  border-radius: 1.25rem;
+  box-shadow: var(--ct-shadow-card);
+}
+
+.ct-tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Accessible focus outlines across interactive elements */
+:where(a:any-link, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 3px solid var(--ct-focus);
+  outline-offset: 2px;
+}
+
+/* Screen-reader only utility with focus reveal for skip links */
+.visually-hidden:where(:not(:focus-within, :active)) {
+  position: absolute !important;
+  clip-path: inset(50%) !important;
+  overflow: hidden !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  white-space: nowrap !important;
+}
+
+/* Native top-layer modal scroll containment */
+dialog:modal {
+  overscroll-behavior: contain;
+}
+
+dialog.ct-drawer[open] {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  inset: 0 0 0 auto;
+  width: min(100vw, 36rem);
+  max-width: 100vw;
+  height: 100dvh;
+  max-height: 100dvh;
+  margin: 0;
+}
+
+dialog::backdrop {
+  overflow: hidden;
+  overscroll-behavior: contain;
+  background: var(--ct-backdrop);
+  backdrop-filter: blur(4px);
+}
+
+@keyframes ct-pulse-soft {
+  0%, 100% {
+    opacity: 0.65;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.06);
+  }
+}
+
+.ct-pulse-dot {
+  @media (prefers-reduced-motion: no-preference) {
+    animation: ct-pulse-soft 2.2s ease-in-out infinite;
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "documentId": "D-03",
+  "facts": [
+    {
+      "id": "R-03",
+      "field": "electricity_used",
+      "value": 15000,
+      "unit": "kWh",
+      "period": "2026-09",
+      "page": 1,
+      "quote": "Units consumed 15,000 kWh",
+      "status": "verified"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "documentId": "D-06",
+  "facts": [
+    {
+      "id": "R-06",
+      "field": "diesel_used",
+      "value": 4000,
+      "unit": "L",
+      "period": "2026-09",
+      "page": 1,
+      "quote": "Diesel supplied for plant DG set 4,000 Litres",
+      "status": "verified"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "documentId": "D-04",
+  "facts": [
+    {
+      "id": "R-04",
+      "field": "furnace_oil_used",
+      "value": 10000,
+      "unit": "L",
+      "period": "2026-Q3",
+      "page": 1,
+      "quote": "Quantity delivered 10,000 Litres",
+      "status": "verified"
+    }
+  ]
+}

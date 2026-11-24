@@ -1,0 +1,78 @@
+[
+  {
+    "id": "O-1",
+    "supplierId": "SUP-01",
+    "supplier": "Sample Steel Wire Co.",
+    "channel": "whatsapp",
+    "language": "Hindi",
+    "gap": "Missing embedded emissions per tonne (tCO2e/t) for 45 t SAE 1018 steel wire rod (Invoice #SWC-9012).",
+    "draft": "Namaste Rajesh ji (Sample Steel Wire Co.), Demo Fasteners ko EU CBAM report (Q3 2026) ke liye aapke SAE 1018 wire rod (45 t, Invoice #SWC-9012) ka verified embedded emissions figure (tCO2e/t) chahiye. Kripya apna EAF mill emission value aur batch confirmation bhej dein. Dhanyavaad!",
+    "status": "draft",
+    "tries": 0,
+    "maxTries": 3,
+    "nextFollowupAt": null,
+    "thread": [
+      {
+        "direction": "in",
+        "text": "Earlier dispatch note: Q3 batch approx 40 tonnes wire rod dispatched from Nashik plant.",
+        "at": "2026-10-03T11:40:00Z",
+        "language": "English"
+      }
+    ]
+  },
+  {
+    "id": "O-2",
+    "supplierId": "SUP-02",
+    "supplier": "Sample Alloy Traders",
+    "channel": "email",
+    "language": "English",
+    "gap": "Precursor emissions certificate for 6.0 t zinc-alloy coating wire (Invoice #AT-319).",
+    "draft": "Hello Meera, could you please share the Q3 2026 embedded emissions certificate (tCO2e/t) for Invoice #AT-319 (6.0 t zinc-alloy wire)?",
+    "status": "replied",
+    "tries": 1,
+    "maxTries": 3,
+    "nextFollowupAt": null,
+    "thread": [
+      {
+        "direction": "out",
+        "text": "Hello Meera, could you please share the Q3 2026 embedded emissions certificate (tCO2e/t) for Invoice #AT-319 (6.0 t zinc-alloy wire)?",
+        "at": "2026-10-02T10:15:00Z",
+        "language": "English"
+      },
+      {
+        "direction": "in",
+        "text": "Hi! Attached mill sheet for Invoice #AT-319 (6.0 tonnes). Verified precursor emissions intensity is 1.25 tCO2e/t (Sample illustrative data).",
+        "at": "2026-10-02T16:45:00Z",
+        "language": "English"
+      }
+    ]
+  },
+  {
+    "id": "O-3",
+    "supplierId": "SUP-03",
+    "supplier": "Sahyadri Fastener Coatings",
+    "channel": "whatsapp",
+    "language": "Marathi",
+    "gap": "Optional follow-up confirmation for surface passivation chemical batch (within de minimis threshold).",
+    "draft": "Namaskar Sunil ji, Q3 2026 chya surface coating batch sathi tumcha process emission data confirm karal ka? Dhanyavaad!",
+    "status": "sent",
+    "tries": 2,
+    "maxTries": 3,
+    "nextFollowupAt": "2026-10-06T09:00:00Z",
+    "thread": [
+      {
+        "direction": "out",
+        "text": "Namaskar Sunil ji, Q3 2026 chya surface coating batch sathi tumcha process emission data confirm karal ka? Dhanyavaad!",
+        "at": "2026-10-02T12:00:00Z",
+        "language": "Marathi"
+      },
+      {
+        "direction": "out",
+        "text": "Gentle reminder: awaiting passivation batch sheet for Q3 EU CBAM filing (try 2 of 3).",
+        "at": "2026-10-04T09:00:00Z",
+        "language": "English"
+      }
+    ]
+  }
+]
+

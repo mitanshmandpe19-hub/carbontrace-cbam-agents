@@ -1,0 +1,51 @@
+[
+  {
+    "id": "SUP-02",
+    "name": "Sample Alloy Traders",
+    "contact": "meera@sample-alloy-traders.example",
+    "language": "English",
+    "products": ["Zinc-Alloy Coating Wire (CN 7217)"],
+    "volumeByPeriod": {
+      "2026-Q1": 5.5,
+      "2026-Q2": 6.0,
+      "2026-Q3": 6.0
+    },
+    "emissionsPerTonne": 1.25,
+    "avgReplyHours": 6.5,
+    "dataQualityScore": 94,
+    "lastVerifiedAt": "2026-10-02T16:45:00Z"
+  },
+  {
+    "id": "SUP-01",
+    "name": "Sample Steel Wire Co.",
+    "contact": "+91 98200 00101 (Sample)",
+    "language": "Hindi / English",
+    "products": ["Cold-Heading Steel Wire Rod (CN 7213 91)"],
+    "volumeByPeriod": {
+      "2026-Q1": 42.0,
+      "2026-Q2": 44.0,
+      "2026-Q3": 45.0
+    },
+    "emissionsPerTonne": 1.6,
+    "avgReplyHours": 28.0,
+    "dataQualityScore": 68,
+    "lastVerifiedAt": "2026-07-10T11:20:00Z"
+  },
+  {
+    "id": "SUP-03",
+    "name": "Sahyadri Fastener Coatings",
+    "contact": "+91 98200 00303 (Sample)",
+    "language": "Marathi",
+    "products": ["Passivation & Phosphate Bath (Aux)"],
+    "volumeByPeriod": {
+      "2026-Q1": 1.2,
+      "2026-Q2": 1.4,
+      "2026-Q3": 1.3
+    },
+    "emissionsPerTonne": 1.48,
+    "avgReplyHours": 52.0,
+    "dataQualityScore": 61,
+    "lastVerifiedAt": "2026-04-14T14:00:00Z"
+  }
+]
+

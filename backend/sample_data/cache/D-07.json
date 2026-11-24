@@ -1,0 +1,15 @@
+{
+  "documentId": "D-07",
+  "facts": [
+    {
+      "id": "R-07",
+      "field": "precursor_wire_rod_tonnes",
+      "value": 45,
+      "unit": "t",
+      "period": "2026-Q3",
+      "page": 1,
+      "quote": "Net Weight Billed 45.0 tonnes",
+      "status": "verified"
+    }
+  ]
+}

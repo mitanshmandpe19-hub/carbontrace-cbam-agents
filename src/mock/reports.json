@@ -1,0 +1,66 @@
+[
+  {
+    "id": "RP-2026-Q1",
+    "period": "2026-Q1",
+    "product": "Steel Fasteners (CN 7318 15)",
+    "emissionsPerTonne": 2.78,
+    "unit": "tCO2e/t",
+    "breakdown": {
+      "direct": 0.94,
+      "indirect": 0.72,
+      "precursors": 1.12
+    },
+    "basisSummary": {
+      "actual": 0.62,
+      "default": 0.38
+    },
+    "totalProductionTonnes": 46,
+    "exportedTonnes": 41,
+    "euDefaultPerTonne": 3.45,
+    "status": "approved",
+    "approvedAt": "2026-04-18T15:30:00Z"
+  },
+  {
+    "id": "RP-2026-Q2",
+    "period": "2026-Q2",
+    "product": "Steel Fasteners (CN 7318 15)",
+    "emissionsPerTonne": 2.61,
+    "unit": "tCO2e/t",
+    "breakdown": {
+      "direct": 0.89,
+      "indirect": 0.68,
+      "precursors": 1.04
+    },
+    "basisSummary": {
+      "actual": 0.78,
+      "default": 0.22
+    },
+    "totalProductionTonnes": 48,
+    "exportedTonnes": 44,
+    "euDefaultPerTonne": 3.45,
+    "status": "approved",
+    "approvedAt": "2026-07-16T11:10:00Z"
+  },
+  {
+    "id": "RP-2026-Q3",
+    "period": "2026-Q3",
+    "product": "Steel Fasteners (CN 7318 15)",
+    "emissionsPerTonne": 3.06,
+    "unit": "tCO2e/t",
+    "breakdown": {
+      "direct": 0.84,
+      "indirect": 0.63,
+      "precursors": 1.59
+    },
+    "basisSummary": {
+      "actual": 0.53,
+      "default": 0.47
+    },
+    "totalProductionTonnes": 50,
+    "exportedTonnes": 46,
+    "euDefaultPerTonne": 3.45,
+    "status": "draft",
+    "approvedAt": null
+  }
+]
+

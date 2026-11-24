@@ -1,0 +1,25 @@
+{
+  "documentId": "D-09",
+  "facts": [
+    {
+      "id": "R-10",
+      "field": "product_tonnes_made",
+      "value": 50,
+      "unit": "t",
+      "period": "2026-Q3",
+      "page": 1,
+      "quote": "Finished Product Output | 50 | tonnes",
+      "status": "verified"
+    },
+    {
+      "id": "R-11",
+      "field": "electricity_log_check",
+      "value": 45,
+      "unit": "MWh",
+      "period": "2026-Q3",
+      "page": 1,
+      "quote": "Total Plant Electricity Logged | 45 | MWh",
+      "status": "pending"
+    }
+  ]
+}

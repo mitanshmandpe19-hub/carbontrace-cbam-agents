@@ -1,0 +1,2 @@
+"""CarbonTrace FastAPI backend package."""
+

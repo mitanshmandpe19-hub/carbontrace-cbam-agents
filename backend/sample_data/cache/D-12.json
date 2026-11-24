@@ -1,0 +1,15 @@
+{
+  "documentId": "D-12",
+  "facts": [
+    {
+      "id": "R-15",
+      "field": "precursor_wire_rod_tonnes_reply",
+      "value": 40,
+      "unit": "t",
+      "period": "2026-Q3",
+      "page": 1,
+      "quote": "Batch quantity noted in reply: 40 tonnes supplied in Q3 (Invoice says 45 t).",
+      "status": "pending"
+    }
+  ]
+}
