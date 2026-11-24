@@ -1,0 +1,52 @@
+[
+  {
+    "id": "RUN-2026-Q3",
+    "companyId": "COMP-DEMO-01",
+    "companyName": "Demo Fasteners Pvt Ltd",
+    "period": "2026-Q3",
+    "product": "Steel Fasteners (Hex Bolts & Nuts)",
+    "cnCode": "7318 15",
+    "state": "needs_fixes",
+    "activeAgent": "verifier",
+    "startedAt": "2026-10-02T09:25:30Z",
+    "updatedAt": "2026-10-03T11:45:00Z",
+    "logs": [
+      {
+        "id": "LOG-01",
+        "at": "2026-10-02T09:25:30Z",
+        "actor": "system",
+        "message": "Started Q3 2026 CBAM evidence run for Demo Fasteners Pvt Ltd (Sample data)."
+      },
+      {
+        "id": "LOG-02",
+        "at": "2026-10-02T09:26:55Z",
+        "actor": "collector",
+        "message": "Extracted 13 sourced facts across 11 sample bills, logs, and invoices.",
+        "detail": "Every record saved with page number and exact verbatim quote."
+      },
+      {
+        "id": "LOG-03",
+        "at": "2026-10-02T09:27:10Z",
+        "actor": "outreach",
+        "message": "Found missing emission intensity for Sample Steel Wire Co. (45 t wire rod).",
+        "detail": "Drafted Hindi/English WhatsApp message O-1 awaiting exporter approval.",
+        "targetId": "O-1"
+      },
+      {
+        "id": "LOG-04",
+        "at": "2026-10-02T09:27:25Z",
+        "actor": "calculator",
+        "message": "Ran deterministic Python emissions formula (using EU default fallback for wire rod).",
+        "detail": "Calculated 3.06 tCO2e/t (53% actual, 47% default)."
+      },
+      {
+        "id": "LOG-05",
+        "at": "2026-10-03T11:45:00Z",
+        "actor": "verifier",
+        "message": "Blocked report approval: 3 blocking issues and 1 duplicate warning detected.",
+        "detail": "UNIT_MISMATCH (R-11), DUPLICATE_DOCUMENT (R-05), SUPPLIER_CONFLICT (R-15), FACTOR_NO_SOURCE (F-6)."
+      }
+    ]
+  }
+]
+

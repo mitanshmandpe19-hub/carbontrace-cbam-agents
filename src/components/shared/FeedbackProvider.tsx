@@ -83,13 +83,13 @@ export function FeedbackProvider({ children }: { children: React.ReactNode }) {
         <div
           role="status"
           aria-live="polite"
-          className="fixed bottom-5 left-5 z-50 flex max-w-sm items-center gap-3 rounded-[14px] border border-[var(--ct-calculator-border)] bg-[var(--ct-surface)] px-4 py-3 text-[14px] font-medium text-[var(--ct-ink)] shadow-lg"
+          className="fixed bottom-5 left-5 z-50 flex max-w-md items-center gap-3 rounded-[14px] border border-[var(--ct-calculator-border)] bg-[var(--ct-surface)] px-4 py-3 text-[14px] font-medium text-[var(--ct-ink)] shadow-xl transition-all"
         >
           <Loader2
             size={18}
             className="shrink-0 animate-spin text-[var(--ct-calculator)]"
           />
-          <span>Waking up the server...</span>
+          <span>Waking up the server, this may take 30-50 seconds on free hosting...</span>
         </div>
       )}
 

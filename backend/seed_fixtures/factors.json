@@ -1,0 +1,66 @@
+[
+  {
+    "id": "F-1",
+    "name": "Furnace oil (LDO) combustion factor",
+    "value": 0.0031,
+    "unit": "tCO2e/L",
+    "year": 2026,
+    "source": "Sample factor (illustrative)",
+    "isIllustrative": true
+  },
+  {
+    "id": "F-2",
+    "name": "Industrial diesel generator factor",
+    "value": 0.00275,
+    "unit": "tCO2e/L",
+    "year": 2026,
+    "source": "Sample factor (illustrative)",
+    "isIllustrative": true
+  },
+  {
+    "id": "F-3",
+    "name": "India national grid electricity factor",
+    "value": 0.0007,
+    "unit": "tCO2e/kWh",
+    "year": 2026,
+    "source": "Sample factor (illustrative)",
+    "isIllustrative": true
+  },
+  {
+    "id": "F-4",
+    "name": "EU CBAM steel wire rod default factor",
+    "value": 1.6,
+    "unit": "tCO2e/t",
+    "year": 2026,
+    "source": "Sample factor (illustrative) — EU Default fallback",
+    "isIllustrative": true
+  },
+  {
+    "id": "F-4B",
+    "name": "Sample Steel Wire Co. verified EAF wire rod factor",
+    "value": 0.9,
+    "unit": "tCO2e/t",
+    "year": 2026,
+    "source": "Sample factor (illustrative) — Supplier reply",
+    "isIllustrative": true
+  },
+  {
+    "id": "F-5",
+    "name": "Sample Alloy Traders zinc-alloy wire factor",
+    "value": 1.25,
+    "unit": "tCO2e/t",
+    "year": 2026,
+    "source": "Sample factor (illustrative) — Supplier sheet",
+    "isIllustrative": true
+  },
+  {
+    "id": "F-6",
+    "name": "Hand-typed annealing gas factor (NO SOURCE)",
+    "value": 0.0021,
+    "unit": "tCO2e/kg",
+    "year": 2026,
+    "source": "Missing — hand-typed without evidence",
+    "isIllustrative": true
+  }
+]
+

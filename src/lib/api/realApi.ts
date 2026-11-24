@@ -108,6 +108,40 @@ interface RequestOptions extends RequestInit {
   allowNotFound?: boolean;
 }
 
+let serverAwakePromise: Promise<boolean> | null = null;
+
+async function pollHealthUntilAwake(maxWaitMs = 60000): Promise<boolean> {
+  if (serverAwakePromise) {
+    return serverAwakePromise;
+  }
+
+  serverAwakePromise = (async () => {
+    const healthUrl = `${getApiBaseUrl()}/health`;
+    const startTime = Date.now();
+    notifyServerWaking(true);
+
+    try {
+      while (Date.now() - startTime < maxWaitMs) {
+        try {
+          const res = await fetch(healthUrl, { method: 'GET', cache: 'no-store' });
+          if (res.ok) {
+            return true;
+          }
+        } catch {
+          // Still waiting for backend instance to boot
+        }
+        await new Promise((r) => setTimeout(r, 2500));
+      }
+      return false;
+    } finally {
+      notifyServerWaking(false);
+      serverAwakePromise = null;
+    }
+  })();
+
+  return serverAwakePromise;
+}
+
 async function rawRequest(path: string, init: RequestOptions = {}): Promise<Response> {
   const {
     requireAuth = true,
@@ -133,40 +167,67 @@ async function rawRequest(path: string, init: RequestOptions = {}): Promise<Resp
   }
 
   const url = `${getApiBaseUrl()}${path}`;
-  try {
-    const res = await fetch(url, {
-      ...rest,
-      headers,
-    });
+  const isHealthCheck = path === '/health' || path === '/api/health';
 
-    if (res.status === 401) {
-      const message = await extractErrorMessage(res);
-      if (requireAuth) {
-        emitAuthExpired('Your session ended. Please log in again.');
+  const execute = async (isRetry = false): Promise<Response> => {
+    try {
+      const res = await fetch(url, {
+        ...rest,
+        headers,
+      });
+
+      // Handle Render free tier cold-start gateways (502, 503, 504)
+      if (!isHealthCheck && !isRetry && (res.status === 502 || res.status === 503 || res.status === 504)) {
+        notifyServerWaking(true);
+        const wokeUp = await pollHealthUntilAwake(60000);
+        if (wokeUp) {
+          return await execute(true);
+        }
       }
-      if (!suppressToast) notifyToast('error', message);
-      throw new ApiError(401, message);
-    }
 
-    if (res.status === 404 && allowNotFound) {
+      if (res.status === 401) {
+        const message = await extractErrorMessage(res);
+        if (requireAuth) {
+          emitAuthExpired('Your session ended. Please log in again.');
+        }
+        if (!suppressToast) notifyToast('error', message);
+        throw new ApiError(401, message);
+      }
+
+      if (res.status === 404 && allowNotFound) {
+        return res;
+      }
+
+      if (!res.ok) {
+        const message = await extractErrorMessage(res);
+        if (!suppressToast) notifyToast('error', message);
+        throw new ApiError(res.status, message);
+      }
+
       return res;
-    }
+    } catch (err) {
+      if (err instanceof ApiError) throw err;
 
-    if (!res.ok) {
-      const message = await extractErrorMessage(res);
+      // Connection dropped or refused during cold-start boot: retry via /health check
+      if (!isHealthCheck && !isRetry) {
+        notifyServerWaking(true);
+        const wokeUp = await pollHealthUntilAwake(60000);
+        if (wokeUp) {
+          return await execute(true);
+        }
+      }
+
+      const message =
+        err instanceof Error && err.message && err.message !== 'Failed to fetch'
+          ? err.message
+          : 'Cannot reach the CarbonTrace server. Check that it is running.';
       if (!suppressToast) notifyToast('error', message);
-      throw new ApiError(res.status, message);
+      throw new ApiError(0, message, true);
     }
+  };
 
-    return res;
-  } catch (err) {
-    if (err instanceof ApiError) throw err;
-    const message =
-      err instanceof Error && err.message && err.message !== 'Failed to fetch'
-        ? err.message
-        : 'Cannot reach the CarbonTrace server. Check that it is running.';
-    if (!suppressToast) notifyToast('error', message);
-    throw new ApiError(0, message, true);
+  try {
+    return await execute();
   } finally {
     endTracking();
   }

@@ -50,7 +50,7 @@ class GeminiReplyParseSchema(BaseModel):
 
 
 def _draft_message_with_gemini(supplier_name: str, language: str, gap_desc: str) -> str:
-    if settings.gemini_api_key.strip():
+    if settings.has_gemini_key:
         try:
             from google import genai  # type: ignore
             from google.genai import types  # type: ignore

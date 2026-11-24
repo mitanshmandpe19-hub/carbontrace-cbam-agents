@@ -1,0 +1,47 @@
+[
+  {
+    "id": "V-1",
+    "code": "UNIT_MISMATCH",
+    "severity": "block",
+    "targetType": "ledger_record",
+    "targetId": "R-11",
+    "message": "Production log lists 45 MWh while electricity bills total 45,000 kWh.",
+    "plainExplanation": "In Production Log Q3 2026.xlsx (row 14), electricity was typed as 45 MWh, while your three utility bills record consumption in kWh (14,000 + 16,000 + 15,000 = 45,000 kWh). Mixing MWh and kWh causes a 1,000x calculation error if left uncorrected.",
+    "suggestedFix": "Confirm kWh as the standard unit and supersede log row R-11 with verified utility bill totals (45,000 kWh).",
+    "status": "open"
+  },
+  {
+    "id": "V-2",
+    "code": "DUPLICATE_DOCUMENT",
+    "severity": "warn",
+    "targetType": "ledger_record",
+    "targetId": "R-05",
+    "message": "Furnace oil invoice #FO-2026-884 was uploaded twice (D-04 and D-05).",
+    "plainExplanation": "Furnace Oil Invoice Jul-Aug 2026 (copy).pdf has the exact same invoice number (#FO-2026-884) and 10,000 L delivery as D-04. Counting both would double your direct furnace fuel emissions.",
+    "suggestedFix": "Mark duplicate record R-05 as superseded and keep only original invoice D-04.",
+    "status": "open"
+  },
+  {
+    "id": "V-3",
+    "code": "SUPPLIER_CONFLICT",
+    "severity": "block",
+    "targetType": "ledger_record",
+    "targetId": "R-15",
+    "message": "Sample Steel Wire Co. message states 40 tonnes supplied, but invoice #SWC-9012 bills 45 tonnes.",
+    "plainExplanation": "Your purchase invoice D-07 from Sample Steel Wire Co. is billed for 45.0 tonnes of wire rod, whereas the supplier's WhatsApp note mentions 40 tonnes. CBAM requires precursor mass to match the invoiced delivery weight.",
+    "suggestedFix": "Verify weighbridge receipt and resolve in favour of signed tax invoice R-07 (45.0 tonnes).",
+    "status": "open"
+  },
+  {
+    "id": "V-4",
+    "code": "FACTOR_NO_SOURCE",
+    "severity": "block",
+    "targetType": "emission_factor",
+    "targetId": "F-6",
+    "message": "Hand-typed annealing gas factor (0.0021 tCO2e/kg) has no official or supplier source.",
+    "plainExplanation": "Floor Supervisor Note proposes a manual emission factor of 0.0021 tCO2e/kg with no laboratory sheet, utility certificate, or factor table citation. CarbonTrace never allows unsourced numbers into an EU CBAM report.",
+    "suggestedFix": "Reject unsourced factor R-13 / F-6 so only documented, sourced factors enter the calculation.",
+    "status": "open"
+  }
+]
+

@@ -31,12 +31,15 @@ from app.services.orchestrator import sync_run_steps
 from app.services.verifier import verify_run
 from scripts.generate_sample_data import generate_all
 
-SEED_FIXTURES_DIR = Path(__file__).resolve().parent.parent / "seed_fixtures"
-FRONTEND_MOCK_DIR = Path(__file__).resolve().parent.parent.parent.parent / "src" / "mock"
+SEED_FIXTURES_DIRS = [
+    Path(__file__).resolve().parent.parent.parent / "seed_fixtures",
+    Path(__file__).resolve().parent.parent / "seed_fixtures",
+    Path(__file__).resolve().parent.parent.parent.parent / "src" / "mock",
+]
 
 
 def _load_frontend_mock(name: str) -> list[dict]:
-    for directory in (SEED_FIXTURES_DIR, FRONTEND_MOCK_DIR):
+    for directory in SEED_FIXTURES_DIRS:
         path = directory / f"{name}.json"
         if path.exists():
             return json.loads(path.read_text(encoding="utf-8"))

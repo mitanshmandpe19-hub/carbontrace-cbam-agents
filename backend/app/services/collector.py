@@ -110,7 +110,7 @@ def _resolve_doc_disk_path(doc: Document) -> Path | None:
 
 
 def _build_gemini_client():
-    if not settings.gemini_api_key.strip():
+    if not settings.has_gemini_key:
         return None
     try:
         from google import genai  # type: ignore
@@ -269,7 +269,7 @@ def collect_document(
     extracted_by = "collector"
 
     used_gemini = False
-    if settings.gemini_api_key.strip():
+    if settings.has_gemini_key:
         try:
             if is_image and disk_path is not None:
                 raw_facts = _extract_with_gemini_vision(doc.file_name, doc.period, disk_path)
@@ -279,6 +279,11 @@ def collect_document(
         except Exception as exc:
             logger.warning("Gemini extraction failed for %s (%s); using fallback.", doc.id, exc)
             used_gemini = False
+    else:
+        logger.warning(
+            "Gemini API key not configured or set to placeholder for %s; using cached sample extraction (demo mode).",
+            doc.id,
+        )
 
     if not used_gemini:
         cached = _load_cached_facts(doc.id)

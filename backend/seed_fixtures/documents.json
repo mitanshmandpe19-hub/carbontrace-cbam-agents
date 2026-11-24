@@ -1,0 +1,298 @@
+[
+  {
+    "id": "D-01",
+    "companyId": "COMP-DEMO-01",
+    "fileName": "Electricity Bill Jul 2026.pdf",
+    "docType": "electricity_bill",
+    "formatLabel": "PDF",
+    "period": "2026-07",
+    "summary": "MSEDCL industrial meter bill for Pune Plant — 14,000 kWh consumed.",
+    "uploadedAt": "2026-10-02T09:15:00Z",
+    "isSample": true,
+    "selectedForRun": true,
+    "previewPages": [
+      {
+        "page": 1,
+        "title": "Maharashtra State Electricity Distribution (Sample Bill)",
+        "subtitle": "Consumer: Demo Fasteners Pvt Ltd | Billing Month: July 2026 | Sample Document",
+        "lines": [
+          { "lineNumber": 1, "text": "Consumer No: 170044912881  |  Tariff: HT-Industry" },
+          { "lineNumber": 2, "text": "Meter Reading (Prev): 128,400 kWh   |   (Curr): 142,400 kWh" },
+          { "lineNumber": 3, "text": "Units consumed: 14,000 kWh", "highlightRecordId": "R-01" },
+          { "lineNumber": 4, "text": "Total Payable: INR 1,24,600 (Sample data only)" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "D-02",
+    "companyId": "COMP-DEMO-01",
+    "fileName": "Electricity Bill Aug 2026.pdf",
+    "docType": "electricity_bill",
+    "formatLabel": "PDF",
+    "period": "2026-08",
+    "summary": "MSEDCL industrial meter bill for Pune Plant — 16,000 kWh consumed.",
+    "uploadedAt": "2026-10-02T09:16:00Z",
+    "isSample": true,
+    "selectedForRun": true,
+    "previewPages": [
+      {
+        "page": 1,
+        "title": "Maharashtra State Electricity Distribution (Sample Bill)",
+        "subtitle": "Consumer: Demo Fasteners Pvt Ltd | Billing Month: August 2026 | Sample Document",
+        "lines": [
+          { "lineNumber": 1, "text": "Consumer No: 170044912881  |  Tariff: HT-Industry" },
+          { "lineNumber": 2, "text": "Meter Reading (Prev): 142,400 kWh   |   (Curr): 158,400 kWh" },
+          { "lineNumber": 3, "text": "Units consumed: 16,000 kWh", "highlightRecordId": "R-02" },
+          { "lineNumber": 4, "text": "Total Payable: INR 1,41,800 (Sample data only)" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "D-03",
+    "companyId": "COMP-DEMO-01",
+    "fileName": "Electricity Bill Sep 2026.pdf",
+    "docType": "electricity_bill",
+    "formatLabel": "PDF",
+    "period": "2026-09",
+    "summary": "MSEDCL industrial meter bill for Pune Plant — 15,000 kWh consumed.",
+    "uploadedAt": "2026-10-02T09:17:00Z",
+    "isSample": true,
+    "selectedForRun": true,
+    "previewPages": [
+      {
+        "page": 1,
+        "title": "Maharashtra State Electricity Distribution (Sample Bill)",
+        "subtitle": "Consumer: Demo Fasteners Pvt Ltd | Billing Month: September 2026 | Sample Document",
+        "lines": [
+          { "lineNumber": 1, "text": "Consumer No: 170044912881  |  Tariff: HT-Industry" },
+          { "lineNumber": 2, "text": "Meter Reading (Prev): 158,400 kWh   |   (Curr): 173,400 kWh" },
+          { "lineNumber": 3, "text": "Units consumed: 15,000 kWh", "highlightRecordId": "R-03" },
+          { "lineNumber": 4, "text": "Total Payable: INR 1,33,200 (Sample data only)" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "D-04",
+    "companyId": "COMP-DEMO-01",
+    "fileName": "Furnace Oil Invoice Jul-Aug 2026.pdf",
+    "docType": "fuel_invoice",
+    "formatLabel": "PDF",
+    "period": "2026-Q3",
+    "summary": "Fuel supply invoice #FO-2026-884 for 10,000 L furnace oil.",
+    "uploadedAt": "2026-10-02T09:18:00Z",
+    "isSample": true,
+    "selectedForRun": true,
+    "previewPages": [
+      {
+        "page": 1,
+        "title": "Western Industrial Fuels (Sample Invoice)",
+        "subtitle": "Invoice #FO-2026-884 | Buyer: Demo Fasteners Pvt Ltd | Sample Document",
+        "lines": [
+          { "lineNumber": 1, "text": "Date: 14 August 2026   |   GSTIN: 27AAACS0000A1Z5 (Sample)" },
+          { "lineNumber": 2, "text": "Item: Heat-Treatment Furnace Oil (Grade LDO)" },
+          { "lineNumber": 3, "text": "Quantity delivered: 10,000 Litres", "highlightRecordId": "R-04" },
+          { "lineNumber": 4, "text": "Delivery Chalan: WIF-4410" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "D-05",
+    "companyId": "COMP-DEMO-01",
+    "fileName": "Furnace Oil Invoice Jul-Aug 2026 (copy).pdf",
+    "docType": "fuel_invoice",
+    "formatLabel": "PDF",
+    "period": "2026-Q3",
+    "summary": "Duplicate upload of Invoice #FO-2026-884 (10,000 L furnace oil).",
+    "uploadedAt": "2026-10-02T09:19:00Z",
+    "isSample": true,
+    "selectedForRun": true,
+    "duplicateOfId": "D-04",
+    "previewPages": [
+      {
+        "page": 1,
+        "title": "Western Industrial Fuels (Sample Invoice - Copy)",
+        "subtitle": "Invoice #FO-2026-884 | Buyer: Demo Fasteners Pvt Ltd | Duplicate File",
+        "lines": [
+          { "lineNumber": 1, "text": "Date: 14 August 2026   |   GSTIN: 27AAACS0000A1Z5 (Sample)" },
+          { "lineNumber": 2, "text": "Item: Heat-Treatment Furnace Oil (Grade LDO)" },
+          { "lineNumber": 3, "text": "Quantity delivered: 10,000 Litres (Duplicate of D-04)", "highlightRecordId": "R-05" },
+          { "lineNumber": 4, "text": "Delivery Chalan: WIF-4410" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "D-06",
+    "companyId": "COMP-DEMO-01",
+    "fileName": "Diesel Generator Invoice Sep 2026.pdf",
+    "docType": "fuel_invoice",
+    "formatLabel": "PDF",
+    "period": "2026-09",
+    "summary": "Backup DG diesel invoice #DL-2026-412 for 4,000 L industrial diesel.",
+    "uploadedAt": "2026-10-02T09:20:00Z",
+    "isSample": true,
+    "selectedForRun": true,
+    "previewPages": [
+      {
+        "page": 1,
+        "title": "Deccan Petroleum Depot (Sample Invoice)",
+        "subtitle": "Invoice #DL-2026-412 | Buyer: Demo Fasteners Pvt Ltd | Sample Document",
+        "lines": [
+          { "lineNumber": 1, "text": "Date: 19 September 2026 | Product: High-Speed Industrial Diesel" },
+          { "lineNumber": 2, "text": "Diesel supplied for plant DG set: 4,000 Litres", "highlightRecordId": "R-06" },
+          { "lineNumber": 3, "text": "Total Amount: INR 3,68,000 (Sample data only)" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "D-07",
+    "companyId": "COMP-DEMO-01",
+    "fileName": "Sample Steel Wire Co - Wire Rod Invoice.pdf",
+    "docType": "material_invoice",
+    "formatLabel": "PDF",
+    "period": "2026-Q3",
+    "summary": "Precursor raw-material invoice #SWC-9012 for 45 tonnes carbon steel wire rod.",
+    "uploadedAt": "2026-10-02T09:21:00Z",
+    "isSample": true,
+    "selectedForRun": true,
+    "previewPages": [
+      {
+        "page": 1,
+        "title": "Sample Steel Wire Co. (Tax Invoice - Sample)",
+        "subtitle": "Invoice #SWC-9012 | Material: Cold-Heading Steel Wire Rod | Sample Document",
+        "lines": [
+          { "lineNumber": 1, "text": "Supplier: Sample Steel Wire Co., Nashik (Sample)" },
+          { "lineNumber": 2, "text": "CN / HS Code: 7213 91 | Grade: SAE 1018 Wire Rod" },
+          { "lineNumber": 3, "text": "Net Weight Billed: 45.0 tonnes", "highlightRecordId": "R-07" },
+          { "lineNumber": 4, "text": "Note: Precursor CO2e intensity per tonne NOT printed on invoice." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "D-08",
+    "companyId": "COMP-DEMO-01",
+    "fileName": "Sample Alloy Traders - Alloy & Zinc Invoice.pdf",
+    "docType": "material_invoice",
+    "formatLabel": "PDF",
+    "period": "2026-Q3",
+    "summary": "Precursor invoice #AT-319 for 6 tonnes zinc-alloy coating wire (includes supplier emission certificate).",
+    "uploadedAt": "2026-10-02T09:22:00Z",
+    "isSample": true,
+    "selectedForRun": true,
+    "previewPages": [
+      {
+        "page": 1,
+        "title": "Sample Alloy Traders (Tax Invoice & Mill Sheet - Sample)",
+        "subtitle": "Invoice #AT-319 | Material: Alloy & Zinc Wire | Sample Document",
+        "lines": [
+          { "lineNumber": 1, "text": "Supplier: Sample Alloy Traders, Thane (Sample)" },
+          { "lineNumber": 2, "text": "Net Weight Supplied: 6.0 tonnes", "highlightRecordId": "R-08" },
+          { "lineNumber": 3, "text": "Declared Precursor Emissions: 1.25 tCO2e/t (Sample verified certificate)", "highlightRecordId": "R-09" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "D-09",
+    "companyId": "COMP-DEMO-01",
+    "fileName": "Production Log Q3 2026.xlsx",
+    "docType": "production_log",
+    "formatLabel": "Excel",
+    "period": "2026-Q3",
+    "summary": "Plant output sheet: 50 tonnes finished steel fasteners; cell D14 logs electricity as 45 MWh.",
+    "uploadedAt": "2026-10-02T09:23:00Z",
+    "isSample": true,
+    "selectedForRun": true,
+    "previewPages": [
+      {
+        "page": 1,
+        "title": "Production Log Q3 2026.xlsx — Sheet: Q3_Summary",
+        "subtitle": "Demo Fasteners Pvt Ltd | Jul-Sep 2026 | Sample Spreadsheet",
+        "lines": [
+          { "lineNumber": 1, "text": "Row 8 | Product: Steel Fasteners (Hex Bolts & Nuts, CN 7318 15)" },
+          { "lineNumber": 2, "text": "Row 9 | Finished Product Output: 50 tonnes", "highlightRecordId": "R-10" },
+          { "lineNumber": 3, "text": "Row 14 | Total Plant Electricity Logged: 45 MWh (unit mismatch vs kWh bills)", "highlightRecordId": "R-11" },
+          { "lineNumber": 4, "text": "Row 15 | Scrap & trimmings returned to bin: 1.0 tonnes" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "D-10",
+    "companyId": "COMP-DEMO-01",
+    "fileName": "EU Shipment List Q3 2026.xlsx",
+    "docType": "shipment_list",
+    "formatLabel": "Excel",
+    "period": "2026-Q3",
+    "summary": "Export packing list for EuroBolt GmbH (Germany): 46 tonnes CN 7318 15 fasteners.",
+    "uploadedAt": "2026-10-02T09:24:00Z",
+    "isSample": true,
+    "selectedForRun": true,
+    "previewPages": [
+      {
+        "page": 1,
+        "title": "EU Shipment List Q3 2026.xlsx — Sheet: Exports_DE",
+        "subtitle": "Buyer: EuroBolt GmbH, Hamburg, Germany | Sample Spreadsheet",
+        "lines": [
+          { "lineNumber": 1, "text": "Container 1 | CN 7318 15 88 | M10 Hex Bolts | 28.0 tonnes" },
+          { "lineNumber": 2, "text": "Container 2 | CN 7318 15 90 | M12 Flanged Nuts | 18.0 tonnes" },
+          { "lineNumber": 3, "text": "Total EU CBAM Shipped Tonnes (Q3 2026): 46.0 tonnes", "highlightRecordId": "R-12" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "D-11",
+    "companyId": "COMP-DEMO-01",
+    "fileName": "Floor Supervisor Note - Custom Gas Factor.txt",
+    "docType": "manual_note",
+    "formatLabel": "Note",
+    "period": "2026-Q3",
+    "summary": "Manual note proposing an unsourced annealing gas factor (0.0021 tCO2e/kg).",
+    "uploadedAt": "2026-10-02T09:25:00Z",
+    "isSample": true,
+    "selectedForRun": true,
+    "previewPages": [
+      {
+        "page": 1,
+        "title": "Hand-Typed Supervisor Note (Unsourced)",
+        "subtitle": "Uploaded manually without source citation | Sample Document",
+        "lines": [
+          { "lineNumber": 1, "text": "Author: Plant Shift Note (no lab report or factor table attached)" },
+          { "lineNumber": 2, "text": "Manual factor entered: 0.0021 tCO2e/kg (no source citation)", "highlightRecordId": "R-13" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "D-12",
+    "companyId": "COMP-DEMO-01",
+    "fileName": "Sample Steel Wire Co - WhatsApp Reply.txt",
+    "docType": "supplier_reply",
+    "formatLabel": "Message",
+    "period": "2026-Q3",
+    "summary": "Simulated supplier WhatsApp reply quoting 0.90 tCO2e/t and 40 tonnes supplied.",
+    "uploadedAt": "2026-10-03T11:40:00Z",
+    "isSample": true,
+    "selectedForRun": true,
+    "previewPages": [
+      {
+        "page": 1,
+        "title": "WhatsApp Thread Export — Sample Steel Wire Co.",
+        "subtitle": "Simulated supplier reply (Demo mode) | Language: English / Hindi",
+        "lines": [
+          { "lineNumber": 1, "text": "From: Rajesh Kulkarni (Sample Steel Wire Co.)" },
+          { "lineNumber": 2, "text": "Message: Namaste ji, our EAF wire rod intensity is 0.90 tCO2e/t for Q3.", "highlightRecordId": "R-14" },
+          { "lineNumber": 3, "text": "Batch quantity noted in reply: 40 tonnes supplied in Q3 (Invoice says 45 t).", "highlightRecordId": "R-15" }
+        ]
+      }
+    ]
+  }
+]
+

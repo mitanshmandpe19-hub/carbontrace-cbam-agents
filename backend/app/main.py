@@ -58,23 +58,28 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=settings.cors_allowlist,
-    allow_credentials=True,
-    allow_methods=["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
-    allow_headers=["Authorization", "Content-Type"],
-    expose_headers=["Content-Disposition"],
-)
+cors_kwargs: dict = {
+    "allow_credentials": True,
+    "allow_methods": ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+    "allow_headers": ["Authorization", "Content-Type", "Accept"],
+    "expose_headers": ["Content-Disposition"],
+}
+if "*" in settings.cors_allowlist or settings.cors_origins.strip() == "*":
+    cors_kwargs["allow_origin_regex"] = r"^https?://.*"
+else:
+    cors_kwargs["allow_origins"] = settings.cors_allowlist
+
+app.add_middleware(CORSMiddleware, **cors_kwargs)
 
 
 @app.get("/health")
+@app.get("/api/health")
 def health():
     return {
         "status": "ok",
         "service": "carbontrace-api",
         "geminiModel": settings.gemini_model,
-        "geminiConfigured": bool(settings.gemini_api_key.strip()),
+        "geminiConfigured": settings.has_gemini_key,
     }
 
 
